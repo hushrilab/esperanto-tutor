@@ -2,7 +2,7 @@
 
 * Author: Cheng Tang <c225tang@uwaterloo.ca>
 
-This is a React App displaying the robot's face and flags interchangeably. 
+This is a React App displaying the robot's faces interchangeably. 
 
 ## Installation
 
