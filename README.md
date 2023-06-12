@@ -1,8 +1,8 @@
-# Esperanto Teaching Tutor Condition Face Display
+# Esperanto Teaching Tutor Condition Tablet Display
 
 * Author: Cheng Tang <c225tang@uwaterloo.ca>
 
-This is a React App acting as a display for the robot's face which can be switched between two facial expressions: happy, smile, sad, blinking by publihsing command into a rostopic named /face_command_topic. 
+This is a React App displaying the robot's face and flags interchangeably. 
 
 ## Installation
 
@@ -40,7 +40,7 @@ rosbridge server:
 
 ## Available Scripts
 
-Get into the app directory by executing in the project directory and install roslib using npm package manager:
+Get into the app directory by executing in the project root directory install roslib using npm package manager:
 
 #### `npm install roslib`
 
@@ -58,8 +58,4 @@ Then, start the rosbridge server by executing:
 
 #### `roslaunch rosbridge_server rosbridge_websocket.launch`
 
-Publish String "happy" into `/face_command_topic` topic will switch the robot to happy face animation:
-
-#### `rostopic pub /face_command_topic std_msgs/String "data: 'happy'"`
-
-The same works for 'smile', 'sad', and 'blinking'.
+## Enjoy learning Esperanto!
