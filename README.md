@@ -58,4 +58,6 @@ Then, start the rosbridge server by executing:
 
 #### `roslaunch rosbridge_server rosbridge_websocket.launch`
 
-## Enjoy learning Esperanto!
+<span style="font-size: 24px; color: green"> 
+Enjoy learning Esperanto!
+</span>
