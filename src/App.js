@@ -183,7 +183,7 @@ import start_teaching_4_mp3 from './tutor_condition/vocab_section_4/start_teachi
 import teach_dormu_mp3 from './tutor_condition/vocab_section_4/teach_dormu.mp3'
 import teach_mangi_mp3 from './tutor_condition/vocab_section_4/teach_mangi.mp3'
 import teach_studi_mp3 from './tutor_condition/vocab_section_4/teach_studi.mp3'
-// import practice_4_intro_mp3 from './tutor_condition/vocab_section_4/practice_intro_4.mp3'
+import practice_4_intro_mp3 from './tutor_condition/vocab_section_4/practice_4_intro.mp3'
 
 const k = 1000;
 
@@ -809,7 +809,7 @@ const teachingSection4 = () => {
   }, currTime*k);
   currTime+=0.5;
   setTimeout(() => {
-    // setPlayAudio(practice_4_intro_mp3);
+    setPlayAudio(practice_4_intro_mp3);
   }, currTime*k);
   currTime+=4;
   setTimeout(() => {
