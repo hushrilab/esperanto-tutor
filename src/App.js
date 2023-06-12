@@ -4326,10 +4326,40 @@ const teachingSection4 = () => {
               setTimeout(() => {
                 setPlayAudio(mangi_wav);
               }, currTime*k);
-              currTime+=2;
+              currTime+=3;
+              const motion3 = new ROSLIB.Message({
+                data: "raise_both_arms"
+              });
               setTimeout(() => {
                 setImgQ12A(false);
                 setImgEnd(true);
+                setPlayAudio(null);
+                motionCommandTopic.publish(motion3);
+              }, currTime*k);
+              currTime+=0.5;
+              setTimeout(() => {
+                setPlayAudio(end_lesson_mp3);
+              }, currTime*k);
+              currTime+=4;
+              const motion4 = new ROSLIB.Message({
+                data: "raise_both_arms"
+              });
+              setTimeout(() => {
+                motionCommandTopic.publish(motion4);
+              }, currTime*k);
+              currTime+=4;
+              const motion5 = new ROSLIB.Message({
+                data: "maple_pow_off"
+              });
+              setTimeout(() => {
+                motionCommandTopic.publish(motion5);
+              }, currTime*k);
+              currTime+=4;
+              const face2 = new ROSLIB.Message({
+                data: "black"
+              });
+              setTimeout(() => {
+                faceCommandTopic.publish(face2);
               }, currTime*k);
             }}
           >
@@ -4347,35 +4377,32 @@ const teachingSection4 = () => {
             }}
 
             onClick={() => {
+              setImgQ12Q(false);
+              setImgMangi(true);
               var currTime = 0;
               const motion1 = new ROSLIB.Message({
                 data: "look_down"
               });
               motionCommandTopic.publish(motion1);
               setTimeout(() => {
-                setImgQ12Q(false);
-                setImgQ12A(true);
                 setPlayAudio(null);
               }, currTime*k);
               currTime+=0.5;
               setTimeout(() => {
-                setPlayAudio(feedback_q12_correct_mp3);
+                setPlayAudio(feedback_q12_wrong_mp3);
               }, currTime*k);
               const motion2 = new ROSLIB.Message({
-                data: "raise_both_hands"
+                data: "head_arms_down"
               });
-              currTime+=3;
+              currTime+=6;
               setTimeout(() => {
                 motionCommandTopic.publish(motion2);
               }, currTime*k);
               const face = new ROSLIB.Message({
-                data: "happy"
+                data: "blinking"
               });
               setTimeout(() => {
                 faceCommandTopic.publish(face);
-              }, currTime*k);
-              currTime+=2.5;
-              setTimeout(() => {
                 setPlayAudio(null);
               }, currTime*k);
               currTime+=0.5;
@@ -4384,8 +4411,43 @@ const teachingSection4 = () => {
               }, currTime*k);
               currTime+=2;
               setTimeout(() => {
+                setImgMangi(false);
+                setImgQ12A(true);
+              }, currTime*k);
+              currTime+=3;
+              const motion3 = new ROSLIB.Message({
+                data: "raise_both_arms"
+              });
+              setTimeout(() => {
                 setImgQ12A(false);
                 setImgEnd(true);
+                setPlayAudio(null);
+                motionCommandTopic.publish(motion3);
+              }, currTime*k);
+              currTime+=0.5;
+              setTimeout(() => {
+                setPlayAudio(end_lesson_mp3);
+              }, currTime*k);
+              currTime+=4;
+              const motion4 = new ROSLIB.Message({
+                data: "raise_both_arms"
+              });
+              setTimeout(() => {
+                motionCommandTopic.publish(motion4);
+              }, currTime*k);
+              currTime+=4;
+              const motion5 = new ROSLIB.Message({
+                data: "maple_pow_off"
+              });
+              setTimeout(() => {
+                motionCommandTopic.publish(motion5);
+              }, currTime*k);
+              currTime+=4;
+              const face2 = new ROSLIB.Message({
+                data: "black"
+              });
+              setTimeout(() => {
+                faceCommandTopic.publish(face2);
               }, currTime*k);
             }}
           >
@@ -4455,7 +4517,7 @@ const teachingSection4 = () => {
               }, currTime*k);
               currTime+=4;
               const motion4 = new ROSLIB.Message({
-                data: "raise_both_arms"
+                data: "wave_left_arm"
               });
               setTimeout(() => {
                 motionCommandTopic.publish(motion4);
